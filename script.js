@@ -119,9 +119,16 @@
     const whatsappNumber = '918169640573';
     const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
 
-    window.open(url, '_blank');
+    const win = window.open(url, '_blank');
 
-    // Reset form
+    if (!win || win.closed) {
+      // Pop-up blocked — keep the visitor's data and offer a direct link
+      const proceed = window.confirm('Your browser blocked the pop-up.\n\nPress OK to open WhatsApp in this tab (your details stay filled).');
+      if (proceed) { window.location.href = url; }
+      return false;
+    }
+
+    // Reset form only after WhatsApp opened successfully
     e.target.reset();
 
     return false;
