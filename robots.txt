@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chef-aniket-consulting.web.app/sitemap.xml
+Sitemap: https://chefaniketconsultingsite.web.app/sitemap.xml
