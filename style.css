@@ -30,7 +30,7 @@
   /* Text */
   --text: #1B241F;
   --text-light: #5E6B64;
-  --text-muted: #97A19B;
+  --text-muted: #5E6B64;
 
   /* Utility */
   --green: #0B5D4E;
@@ -108,6 +108,7 @@ a { color: inherit; }
 .brand-name em { font-style: normal; color: var(--accent); }
 .brand-tag { font-size: 8px; letter-spacing: 3.2px; color: rgba(255,255,255,.45); margin-top: 6px; font-weight: 600; text-transform: uppercase; transition: var(--transition); }
 .site-header.scrolled .brand-name { color: var(--ink); }
+.site-header.scrolled .brand-name em { color: #A5762F; }
 .site-header.scrolled .brand-tag { color: rgba(12,27,22,.45); }
 
 .main-nav { display: flex; gap: 32px; margin-left: auto; }
@@ -337,7 +338,7 @@ a { color: inherit; }
   color: var(--primary-50); line-height: 1; margin-bottom: 14px; transition: var(--transition);
 }
 @supports (-webkit-text-stroke: 1px black) {
-  .card-number { color: transparent; -webkit-text-stroke: 1.5px rgba(11,93,78,.4); }
+  .card-number { color: transparent; -webkit-text-stroke: 1.5px rgba(11,93,78,.7); }
   .card:hover .card-number { -webkit-text-stroke-color: var(--accent-dark); }
 }
 .card:hover .card-number { color: var(--primary); }
@@ -445,7 +446,7 @@ a { color: inherit; }
   box-shadow: var(--shadow-champagne); border-color: var(--accent);
 }
 .step span { font-size: 13.5px; color: rgba(255,255,255,.85); font-weight: 600; }
-.step small { font-size: 11.5px; color: rgba(255,255,255,.4); letter-spacing: .02em; }
+.step small { font-size: 11.5px; color: rgba(255,255,255,.58); letter-spacing: .02em; }
 .step-line { width: 54px; height: 1.5px; background: linear-gradient(90deg, rgba(216,178,106,.7), rgba(216,178,106,.15)); margin: 0 8px; margin-bottom: 44px; }
 
 /* ============================================
@@ -559,15 +560,15 @@ footer { background: var(--ink); padding: 64px 0 0; border-top: 1px solid rgba(2
 .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; padding-bottom: 44px; }
 .footer-brand b { font-family: var(--font-display); font-size: 27px; font-weight: 700; color: var(--white); letter-spacing: .01em; }
 .footer-brand b span { color: var(--accent); }
-.footer-brand p { color: rgba(255,255,255,.45); font-size: 14px; margin-top: 8px; letter-spacing: .04em; }
+.footer-brand p { color: rgba(255,255,255,.56); font-size: 14px; margin-top: 8px; letter-spacing: .04em; }
 .footer-links { text-align: right; }
-.footer-links p { font-size: 11px; color: rgba(255,255,255,.38); margin-bottom: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .24em; }
+.footer-links p { font-size: 11px; color: rgba(255,255,255,.58); margin-bottom: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .24em; }
 .footer-links a { color: rgba(255,255,255,.62); text-decoration: none; font-size: 14px; font-weight: 600; transition: var(--transition); }
 .footer-links a:hover { color: var(--accent); }
 .footer-links .sep { color: rgba(255,255,255,.25); margin: 0 8px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 22px 24px; text-align: center; }
-.footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,.32); letter-spacing: .02em; }
-.footer-bottom a { color: rgba(255,255,255,.45); text-decoration: underline; text-underline-offset: 3px; transition: var(--transition); }
+.footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,.56); letter-spacing: .02em; }
+.footer-bottom a { color: rgba(255,255,255,.66); text-decoration: underline; text-underline-offset: 3px; transition: var(--transition); }
 .footer-bottom a:hover { color: var(--accent); }
 
 /* ============================================
@@ -660,7 +661,8 @@ footer { background: var(--ink); padding: 64px 0 0; border-top: 1px solid rgba(2
   .audit-form { padding: 30px 22px; }
   .brand-logos { gap: 24px; }
   .logo-placeholder { width: 92px; height: 92px; }
-  .hero-experience { position: static; margin-top: 16px; display: inline-block; }
+  .hero-photo { flex-direction: column; align-items: center; gap: 18px; }
+  .hero-experience { position: static; margin-top: 0; display: inline-block; }
   .stat-badge { font-size: 11px; padding: 8px 14px; }
 }
 
