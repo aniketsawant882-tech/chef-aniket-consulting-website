@@ -595,6 +595,58 @@ footer { background: var(--ink); padding: 64px 0 0; border-top: 1px solid rgba(2
 }
 
 /* ============================================
+   INTRO VIDEO MODAL
+   ============================================ */
+.video-modal {
+  position: fixed; inset: 0; z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  visibility: hidden; opacity: 0;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+.video-modal.open { visibility: visible; opacity: 1; }
+.video-modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(12, 27, 22, .84);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.video-modal-card {
+  position: relative;
+  width: min(880px, 100%);
+  background: var(--ink);
+  border: 1px solid rgba(216, 178, 106, .35);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(16px) scale(.97);
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+}
+.video-modal.open .video-modal-card { transform: translateY(0) scale(1); }
+.video-modal-card video {
+  display: block;
+  width: 100%; max-height: 78vh;
+  border-radius: var(--radius);
+  background: #000;
+}
+.video-modal-close {
+  position: absolute; top: -50px; right: 0;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(216, 178, 106, .55);
+  background: rgba(12, 27, 22, .65);
+  color: var(--accent);
+  font-size: 15px; line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.video-modal-close:hover, .video-modal-close:focus-visible {
+  background: var(--accent); color: var(--ink); outline: none;
+}
+@media (max-width: 560px) {
+  .video-modal-card video { max-height: 56vh; }
+  .video-modal-close { top: auto; bottom: -54px; left: 50%; right: auto; transform: translateX(-50%); }
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {

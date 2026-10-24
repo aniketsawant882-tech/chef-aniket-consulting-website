@@ -173,7 +173,40 @@
   const footerYear = document.querySelector('.footer-bottom p');
   if (footerYear) {
     const year = new Date().getFullYear();
-    footerYear.innerHTML = '&copy; ' + year + ' Chef Aniket Restaurant Consulting. All rights reserved.';
+    footerYear.innerHTML = '&copy; ' + year + ' Chef Aniket Restaurant Consulting. All rights reserved. · <a href="privacy.html">Privacy Policy</a>';
+  }
+
+  /* --- Intro Video Modal --- */
+  const introBtn = document.getElementById('introBtn');
+  const introModal = document.getElementById('introModal');
+  const introVideo = document.getElementById('introVideo');
+  const introClose = document.getElementById('introClose');
+
+  if (introBtn && introModal && introVideo) {
+    const openIntro = function (e) {
+      if (e) e.preventDefault();
+      introModal.classList.add('open');
+      introModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      introVideo.play().catch(function () { /* autoplay blocked — user presses play */ });
+    };
+
+    const closeIntro = function () {
+      introModal.classList.remove('open');
+      introModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      introVideo.pause();
+      introVideo.currentTime = 0;
+    };
+
+    introBtn.addEventListener('click', openIntro);
+    if (introClose) introClose.addEventListener('click', closeIntro);
+    introModal.querySelectorAll('[data-close]').forEach(function (el) {
+      el.addEventListener('click', closeIntro);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && introModal.classList.contains('open')) closeIntro();
+    });
   }
 
 })();
