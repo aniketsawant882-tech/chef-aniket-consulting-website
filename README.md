@@ -77,8 +77,8 @@ All copy lives in `index.html`. Frequent edits:
 
 ---
 
-## Optional upgrades (not yet done — need your input)
+## Status
 
-1. **Google Analytics (GA4)** — a ready-to-activate snippet is already in `index.html` inside a comment near the top. Paste your Measurement ID (`G-XXXXXXXXXX`) into the two marked spots, remove the comment marks, and deploy. The privacy policy already discloses analytics.
-2. **Custom domain** — you must buy a domain (e.g. Namecheap/GoDaddy/Google Domains), then in Firebase Console → Hosting → Custom domain, add it and point your registrar's DNS at Firebase (A records `151.101.1.10` & `151.101.65.10`, or a CNAME). Firebase provisions HTTPS automatically.
-3. **Real client testimonial** — replace the placeholder quote with a genuine, attributed one.
+1. ~~**Google Analytics (GA4)**~~ ✅ **Done** — active with measurement ID `G-SHPBE1C2Y8`.
+2. ~~**Custom domain**~~ ✅ **Done** — https://chefaniket.com and https://www.chefaniket.com are live with automatic HTTPS certificates (Firebase Hosting custom domains; DNS hosted at GoDaddy).
+3. **Real client testimonial** — still pending. Replace the placeholder quote with a genuine, attributed one when you have it (do not invent reviews).
