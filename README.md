@@ -2,7 +2,7 @@
 
 Premium one-page website for **Chef Aniket Restaurant Consulting** — menu engineering, kitchen operations, staff training and restaurant marketing for Indian restaurants and cloud kitchens.
 
-**Live:** https://chefaniketconsultingsite.web.app
+**Live:** https://chefaniket.com (Firebase alias: https://chefaniketconsultingsite.web.app)
 
 ---
 
